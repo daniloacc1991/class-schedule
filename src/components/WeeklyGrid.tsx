@@ -72,7 +72,7 @@ export default function WeeklyGrid({
       <div className="min-w-[700px]">
         {/* Header */}
         <div className="grid grid-cols-[80px_repeat(5,1fr)] gap-2 mb-2">
-          <div className="text-xs font-display font-semibold text-gray-400 dark:text-gray-500 text-center py-2">
+          <div className="text-xs font-display font-semibold text-gray-500 dark:text-gray-500 text-center py-2">
             Hora
           </div>
           {ALL_DAYS.map((day) => (
@@ -82,7 +82,7 @@ export default function WeeklyGrid({
                 text-center py-2 rounded-xl font-display font-semibold text-sm
                 ${currentDay === day
                   ? 'bg-purple-100 text-purple-700 dark:bg-purple-900/40 dark:text-purple-300'
-                  : 'text-gray-600 dark:text-gray-400'}
+                  : 'text-gray-700 dark:text-gray-400'}
               `}
             >
               <span className="mr-1" aria-hidden="true">{DAY_EMOJIS[day]}</span>

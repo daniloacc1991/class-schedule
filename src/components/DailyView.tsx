@@ -48,7 +48,7 @@ export default function DailyView({
                 ? 'bg-purple-600 text-white shadow-lg shadow-purple-300 dark:shadow-purple-900 pill-active ring-purple-400'
                 : currentDay === day
                   ? 'bg-purple-100 text-purple-700 dark:bg-purple-900/40 dark:text-purple-300'
-                  : 'bg-white/70 text-gray-600 hover:bg-white dark:bg-gray-800/70 dark:text-gray-300 dark:hover:bg-gray-800'}
+                  : 'bg-white/70 text-gray-700 hover:bg-white dark:bg-gray-800/70 dark:text-gray-300 dark:hover:bg-gray-800'}
             `}
           >
             <span aria-hidden="true">{DAY_EMOJIS[day]}</span>
