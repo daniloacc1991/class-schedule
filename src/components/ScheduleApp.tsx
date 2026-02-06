@@ -9,6 +9,7 @@ import Toolbar from './Toolbar';
 import WeeklyGrid from './WeeklyGrid';
 import DailyView from './DailyView';
 import MaterialModal from './MaterialModal';
+import UniformBanner from './UniformBanner';
 
 function getInitialDay(): DayOfWeek {
   const dayMap: Record<number, DayOfWeek> = {
@@ -109,6 +110,8 @@ export default function ScheduleApp() {
           onFilter={(id) => dispatch({ type: 'SET_SUBJECT_FILTER', payload: id })}
         />
       </div>
+
+      <UniformBanner gradeId={state.selectedGrade} currentDay={currentDay} />
 
       <div className="mt-4">
         {state.viewMode === 'weekly' ? (
