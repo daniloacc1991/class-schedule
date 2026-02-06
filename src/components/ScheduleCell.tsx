@@ -28,13 +28,16 @@ export default function ScheduleCell({ entry, isCurrent, isDimmed, onClick }: Sc
         <span className="text-lg flex-shrink-0" aria-hidden="true">{subject.emoji}</span>
         <div className="min-w-0">
           <div className="font-semibold text-sm leading-tight truncate">{subject.name}</div>
+          {subject.nameAlt && (
+            <div className="text-[10px] leading-tight opacity-60 truncate">{subject.nameAlt}</div>
+          )}
           <div className="text-xs opacity-70 mt-0.5">
             {entry.time.start} - {entry.time.end}
           </div>
           {entry.requiresPEUniform && (
             <div className="text-xs mt-1 flex items-center gap-1">
               <span aria-hidden="true">👟</span>
-              <span className="opacity-80">Uniforme deportes</span>
+              <span className="opacity-80">Uniforme de deportes</span>
             </div>
           )}
         </div>

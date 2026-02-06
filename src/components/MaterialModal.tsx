@@ -103,6 +103,9 @@ export default function MaterialModal({ subjectId, onClose }: MaterialModalProps
               <span className="text-3xl">{subject.emoji}</span>
               <div>
                 <h2 className="text-xl font-display font-bold">{subject.name}</h2>
+                {subject.nameAlt && (
+                  <p className="text-sm opacity-60">{subject.nameAlt}</p>
+                )}
                 <p className="text-sm opacity-70">Materiales necesarios</p>
               </div>
             </div>

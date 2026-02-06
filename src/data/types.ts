@@ -17,6 +17,7 @@ export interface MaterialItem {
 export interface SubjectDefinition {
   id: string;
   name: string;
+  nameAlt?: string;
   emoji: string;
   colorLight: string;
   colorDark: string;

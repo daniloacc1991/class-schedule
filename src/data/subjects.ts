@@ -4,6 +4,7 @@ export const subjects: Record<string, SubjectDefinition> = {
   english: {
     id: 'english',
     name: 'English',
+    nameAlt: 'Inglés',
     emoji: '🇬🇧',
     colorLight: 'bg-sky-300 text-sky-950 border-sky-500',
     colorDark: 'dark:bg-sky-900/40 dark:text-sky-200 dark:border-sky-700',
@@ -17,6 +18,7 @@ export const subjects: Record<string, SubjectDefinition> = {
   'leng-castellana': {
     id: 'leng-castellana',
     name: 'Leng. Castellana',
+    nameAlt: 'Spanish Language',
     emoji: '📝',
     colorLight: 'bg-emerald-300 text-emerald-950 border-emerald-500',
     colorDark: 'dark:bg-emerald-900/40 dark:text-emerald-200 dark:border-emerald-700',
@@ -28,6 +30,7 @@ export const subjects: Record<string, SubjectDefinition> = {
   matematicas: {
     id: 'matematicas',
     name: 'Matemáticas',
+    nameAlt: 'Mathematics',
     emoji: '🔢',
     colorLight: 'bg-orange-300 text-orange-950 border-orange-500',
     colorDark: 'dark:bg-orange-900/40 dark:text-orange-200 dark:border-orange-700',
@@ -39,6 +42,7 @@ export const subjects: Record<string, SubjectDefinition> = {
   geometry: {
     id: 'geometry',
     name: 'Geometry',
+    nameAlt: 'Geometría',
     emoji: '📐',
     colorLight: 'bg-amber-300 text-amber-950 border-amber-500',
     colorDark: 'dark:bg-amber-900/40 dark:text-amber-200 dark:border-amber-700',
@@ -49,6 +53,7 @@ export const subjects: Record<string, SubjectDefinition> = {
   science: {
     id: 'science',
     name: 'Science',
+    nameAlt: 'Ciencias',
     emoji: '🧪',
     colorLight: 'bg-teal-300 text-teal-950 border-teal-500',
     colorDark: 'dark:bg-teal-900/40 dark:text-teal-200 dark:border-teal-700',
@@ -62,6 +67,7 @@ export const subjects: Record<string, SubjectDefinition> = {
   'ciencias-naturales': {
     id: 'ciencias-naturales',
     name: 'Ciencias Naturales',
+    nameAlt: 'Natural Sciences',
     emoji: '🌿',
     colorLight: 'bg-lime-300 text-lime-950 border-lime-500',
     colorDark: 'dark:bg-lime-900/40 dark:text-lime-200 dark:border-lime-700',
@@ -73,6 +79,7 @@ export const subjects: Record<string, SubjectDefinition> = {
   'ciencias-sociales': {
     id: 'ciencias-sociales',
     name: 'Ciencias Sociales',
+    nameAlt: 'Social Sciences',
     emoji: '🌍',
     colorLight: 'bg-yellow-300 text-yellow-950 border-yellow-500',
     colorDark: 'dark:bg-yellow-900/40 dark:text-yellow-200 dark:border-yellow-700',
@@ -83,6 +90,7 @@ export const subjects: Record<string, SubjectDefinition> = {
   'social-studies': {
     id: 'social-studies',
     name: 'Social Studies',
+    nameAlt: 'Estudios Sociales',
     emoji: '🗺️',
     colorLight: 'bg-amber-300 text-amber-950 border-amber-500',
     colorDark: 'dark:bg-amber-900/40 dark:text-amber-200 dark:border-amber-700',
@@ -94,6 +102,7 @@ export const subjects: Record<string, SubjectDefinition> = {
   conversation: {
     id: 'conversation',
     name: 'Conversation',
+    nameAlt: 'Conversación',
     emoji: '💬',
     colorLight: 'bg-indigo-300 text-indigo-950 border-indigo-500',
     colorDark: 'dark:bg-indigo-900/40 dark:text-indigo-200 dark:border-indigo-700',
@@ -102,6 +111,7 @@ export const subjects: Record<string, SubjectDefinition> = {
   music: {
     id: 'music',
     name: 'Music',
+    nameAlt: 'Música',
     emoji: '🎵',
     colorLight: 'bg-pink-300 text-pink-950 border-pink-500',
     colorDark: 'dark:bg-pink-900/40 dark:text-pink-200 dark:border-pink-700',
@@ -113,6 +123,7 @@ export const subjects: Record<string, SubjectDefinition> = {
   art: {
     id: 'art',
     name: 'Art',
+    nameAlt: 'Arte',
     emoji: '🎨',
     colorLight: 'bg-rose-300 text-rose-950 border-rose-500',
     colorDark: 'dark:bg-rose-900/40 dark:text-rose-200 dark:border-rose-700',
@@ -122,7 +133,8 @@ export const subjects: Record<string, SubjectDefinition> = {
   },
   robotics: {
     id: 'robotics',
-    name: 'Robotics I.C.T',
+    name: 'Robotics I.C.T.',
+    nameAlt: 'Robótica T.I.C.',
     emoji: '🤖',
     colorLight: 'bg-blue-300 text-blue-950 border-blue-500',
     colorDark: 'dark:bg-blue-900/40 dark:text-blue-200 dark:border-blue-700',
@@ -131,6 +143,7 @@ export const subjects: Record<string, SubjectDefinition> = {
   'educacion-fisica': {
     id: 'educacion-fisica',
     name: 'Educación Física',
+    nameAlt: 'Physical Education',
     emoji: '⚽',
     colorLight: 'bg-red-300 text-red-950 border-red-500',
     colorDark: 'dark:bg-red-900/40 dark:text-red-200 dark:border-red-700',
@@ -141,6 +154,7 @@ export const subjects: Record<string, SubjectDefinition> = {
   danza: {
     id: 'danza',
     name: 'Danza',
+    nameAlt: 'Dance',
     emoji: '💃',
     colorLight: 'bg-fuchsia-300 text-fuchsia-950 border-fuchsia-500',
     colorDark: 'dark:bg-fuchsia-900/40 dark:text-fuchsia-200 dark:border-fuchsia-700',
@@ -151,6 +165,7 @@ export const subjects: Record<string, SubjectDefinition> = {
   etica: {
     id: 'etica',
     name: 'Ética',
+    nameAlt: 'Ethics',
     emoji: '⚖️',
     colorLight: 'bg-violet-300 text-violet-950 border-violet-500',
     colorDark: 'dark:bg-violet-900/40 dark:text-violet-200 dark:border-violet-700',
@@ -161,6 +176,7 @@ export const subjects: Record<string, SubjectDefinition> = {
   religion: {
     id: 'religion',
     name: 'Religión',
+    nameAlt: 'Religion',
     emoji: '🙏',
     colorLight: 'bg-purple-300 text-purple-950 border-purple-500',
     colorDark: 'dark:bg-purple-900/40 dark:text-purple-200 dark:border-purple-700',
@@ -169,6 +185,7 @@ export const subjects: Record<string, SubjectDefinition> = {
   'escritura-creativa': {
     id: 'escritura-creativa',
     name: 'Escritura Creativa',
+    nameAlt: 'Creative Writing',
     emoji: '✍️',
     colorLight: 'bg-cyan-300 text-cyan-950 border-cyan-500',
     colorDark: 'dark:bg-cyan-900/40 dark:text-cyan-200 dark:border-cyan-700',
@@ -179,6 +196,7 @@ export const subjects: Record<string, SubjectDefinition> = {
   'lectura-critica': {
     id: 'lectura-critica',
     name: 'Lectura Crítica',
+    nameAlt: 'Critical Reading',
     emoji: '📖',
     colorLight: 'bg-stone-300 text-stone-950 border-stone-500',
     colorDark: 'dark:bg-stone-900/40 dark:text-stone-200 dark:border-stone-700',
@@ -189,6 +207,7 @@ export const subjects: Record<string, SubjectDefinition> = {
   'lectura-critica-2': {
     id: 'lectura-critica-2',
     name: 'Lectura Crítica',
+    nameAlt: 'Critical Reading',
     emoji: '📖',
     colorLight: 'bg-stone-300 text-stone-950 border-stone-500',
     colorDark: 'dark:bg-stone-900/40 dark:text-stone-200 dark:border-stone-700',
@@ -199,6 +218,7 @@ export const subjects: Record<string, SubjectDefinition> = {
   'pensamiento-creativo': {
     id: 'pensamiento-creativo',
     name: 'Pensamiento Creativo',
+    nameAlt: 'Creative Thinking',
     emoji: '💡',
     colorLight: 'bg-yellow-300 text-yellow-950 border-yellow-500',
     colorDark: 'dark:bg-yellow-900/40 dark:text-yellow-200 dark:border-yellow-700',
@@ -209,7 +229,8 @@ export const subjects: Record<string, SubjectDefinition> = {
   // Special entries
   prayer: {
     id: 'prayer',
-    name: 'Prayer / Brain Gym / Reading',
+    name: 'Oración / Brain Gym / Lectura',
+    nameAlt: 'Prayer / Brain Gym / Reading',
     emoji: '🙏',
     colorLight: 'bg-gradient-to-r from-blue-200 to-purple-200 text-purple-900 border-purple-400',
     colorDark: 'dark:bg-gradient-to-r dark:from-blue-950/30 dark:to-purple-950/30 dark:text-purple-300 dark:border-purple-800',
@@ -220,7 +241,8 @@ export const subjects: Record<string, SubjectDefinition> = {
   },
   break: {
     id: 'break',
-    name: 'Break',
+    name: 'Recreo',
+    nameAlt: 'Break',
     emoji: '🎉',
     colorLight: 'bg-green-200 text-green-900 border-green-400',
     colorDark: 'dark:bg-green-950/30 dark:text-green-300 dark:border-green-800',
@@ -228,7 +250,8 @@ export const subjects: Record<string, SubjectDefinition> = {
   },
   'fruit-time': {
     id: 'fruit-time',
-    name: 'Fruit Time',
+    name: 'Hora de la Fruta',
+    nameAlt: 'Fruit Time',
     emoji: '🍎',
     colorLight: 'bg-red-200 text-red-800 border-red-400',
     colorDark: 'dark:bg-red-950/30 dark:text-red-300 dark:border-red-800',
@@ -236,7 +259,8 @@ export const subjects: Record<string, SubjectDefinition> = {
   },
   'go-home': {
     id: 'go-home',
-    name: 'Go Home',
+    name: 'Salida',
+    nameAlt: 'Go Home',
     emoji: '🏠',
     colorLight: 'bg-slate-200 text-slate-800 border-slate-400',
     colorDark: 'dark:bg-slate-800/30 dark:text-slate-300 dark:border-slate-700',
@@ -245,6 +269,7 @@ export const subjects: Record<string, SubjectDefinition> = {
   'club-de-tareas': {
     id: 'club-de-tareas',
     name: 'Club de Tareas',
+    nameAlt: 'Homework Club',
     emoji: '📚',
     colorLight: 'bg-gray-200 text-gray-800 border-gray-400',
     colorDark: 'dark:bg-gray-800/30 dark:text-gray-300 dark:border-gray-700',
@@ -253,6 +278,7 @@ export const subjects: Record<string, SubjectDefinition> = {
   clubes: {
     id: 'clubes',
     name: 'Clubes',
+    nameAlt: 'Clubs',
     emoji: '🎯',
     colorLight: 'bg-gray-200 text-gray-800 border-gray-400',
     colorDark: 'dark:bg-gray-800/30 dark:text-gray-300 dark:border-gray-700',
