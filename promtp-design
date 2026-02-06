@@ -1,0 +1,221 @@
+# Prompt: Diseño UI — Horario Escolar de Sofía
+
+Diseña la interfaz completa de una aplicación web responsive para visualizar el horario escolar de una niña llamada Sofía. La app debe ser colorida, divertida y funcional. Está hecha con Astro + React + Tailwind CSS v4. Fuentes: Fredoka (títulos) y Nunito (cuerpo).
+
+---
+
+## Navegación principal
+
+Un **menú lateral (sidebar)** o **dropdown en el header** para alternar entre dos grados:
+
+- **Primero B (2025)**
+- **Segundo A (2026)**
+
+Al seleccionar un grado, toda la vista del horario cambia. El grado activo debe verse claramente destacado. En móvil, el menú puede ser un selector desplegable o un bottom sheet.
+
+---
+
+## Estructura del horario
+
+Ambos grados comparten la misma estructura de franjas horarias:
+
+| Franja | Hora | Tipo |
+|---|---|---|
+| Oración | 06:15 – 06:45 | Especial (todos los días) |
+| Periodo 1 | 06:45 – 07:30 | Clase |
+| Periodo 2 | 07:30 – 08:15 | Clase |
+| Descanso | 08:15 – 08:40 | Especial (todos los días) |
+| Periodo 3 | 08:40 – 09:25 | Clase |
+| Periodo 4 | 09:25 – 10:10 | Clase |
+| Periodo 5 | 10:10 – 10:55 | Clase |
+| Hora de fruta | 10:55 – 11:15 | Especial (todos los días) |
+| Periodo 6 | 11:15 – 12:00 | Clase |
+| Periodo 7 | 12:00 – 12:45 | Clase |
+| Periodo 8 | 12:45 – 13:30 | Clase |
+| Salida | 13:30 | Especial |
+| Club de Tareas | 14:00 – 17:00 | Opcional |
+
+Días: Lunes, Martes, Miércoles, Jueves, Viernes.
+
+---
+
+## Horario completo — PRIMERO B (2025)
+
+| Hora | Lunes | Martes | Miércoles | Jueves | Viernes |
+|---|---|---|---|---|---|
+| 06:15–06:45 | Oración / Brain Gym / Lectura | — | — | — | — |
+| 06:45–07:30 | English | Leng. Castellana | English | **Danza | Matemáticas |
+| 07:30–08:15 | English | Leng. Castellana | English | Conversation | Matemáticas |
+| 08:15–08:40 | DESCANSO | — | — | — | — |
+| 08:40–09:25 | **Ed. Física | English | Matemáticas | Leng. Castellana | Geometry |
+| 09:25–10:10 | **Ed. Física | C. Naturales | Matemáticas | Leng. Castellana | Social Studies |
+| 10:10–10:55 | Pensamiento Creativo | C. Naturales | Science | Music | English |
+| 10:55–11:15 | HORA DE FRUTA | — | — | — | — |
+| 11:15–12:00 | Science | C. Sociales | Ética | English | Art |
+| 12:00–12:45 | Science | C. Sociales | Social Studies | English | Robotics I.C.T |
+| 12:45–13:30 | Escritura Creativa | Lectura Crítica | Social Studies | Religión | Robotics I.C.T |
+| 13:30 | SALIDA | — | — | — | — |
+| 14:00–17:00 | Club de Tareas | — | — | — | — |
+
+**Uniformes Primero B:**
+- Lunes: Uniforme de Deportes (Ed. Física)
+- Martes: Uniforme de Diario
+- Miércoles: Uniforme de Diario
+- Jueves: Uniforme de Deportes (Danza)
+- Viernes: Uniforme Ed. Física + Camiseta #37 (no polo)
+
+---
+
+## Horario completo — SEGUNDO A (2026)
+
+| Hora | Lunes | Martes | Miércoles | Jueves | Viernes |
+|---|---|---|---|---|---|
+| 06:15–06:45 | Oración / Brain Gym / Lectura | — | — | — | — |
+| 06:45–07:30 | C. Sociales | Matemáticas | Leng. Castellana | English | Social Studies |
+| 07:30–08:15 | C. Sociales | Matemáticas | Leng. Castellana | English | Social Studies |
+| 08:15–08:40 | DESCANSO | — | — | — | — |
+| 08:40–09:25 | English | Lectura Crítica | Robotics I.C.T | C. Naturales | **Ed. Física |
+| 09:25–10:10 | English | English | Robotics I.C.T | C. Naturales | **Ed. Física |
+| 10:10–10:55 | Art | English | Social Studies | Music | Pensamiento Creativo |
+| 10:55–11:15 | HORA DE FRUTA | — | — | — | — |
+| 11:15–12:00 | Leng. Castellana | Religión | **Danza | Matemáticas | Ética |
+| 12:00–12:45 | Leng. Castellana | Science | English | Matemáticas | Escritura Creativa |
+| 12:45–13:30 | Conversation | Science | English | Science | Geometry |
+| 13:30 | SALIDA | — | — | — | — |
+| 14:00–17:00 | Club de Tareas | Club de Tareas | Club de Tareas | Club de Tareas | Clubes |
+
+**Uniformes Segundo A:**
+- Lunes: Uniforme de Diario
+- Martes: Uniforme de Diario
+- Miércoles: Uniforme de Deportes (Danza)
+- Jueves: Uniforme de Diario
+- Viernes: Uniforme Ed. Física + Camiseta #37 (no polo)
+
+> Las materias con `**` (Danza, Ed. Física) requieren uniforme de deportes ese día.
+
+---
+
+## Materias y sus materiales
+
+Cada materia tiene un emoji, un color distintivo y una lista de materiales. Al hacer clic en una celda del horario se abre un modal con los materiales y checkboxes.
+
+| Materia | Emoji | Color | Materiales |
+|---|---|---|---|
+| English | 🇬🇧 | Sky (azul cielo) | 2 Libros Power UP, Diccionario, Cuaderno, Audífonos |
+| Leng. Castellana | 📝 | Emerald (verde) | Libro Lenguaje, Cuaderno |
+| Matemáticas | 🔢 | Orange (naranja) | Libro Matemáticas, Cuaderno |
+| Geometry | 📐 | Amber (ámbar) | Cuaderno |
+| Science | 🧪 | Teal (turquesa) | Libro Science Workbook 2, Diccionario, Cuaderno, Bata |
+| C. Naturales | 🌿 | Lime (lima) | Cuaderno, Bata |
+| C. Sociales | 🌍 | Yellow (amarillo) | Cuaderno |
+| Social Studies | 🗺️ | Amber (ámbar) | Cuaderno, Diccionario |
+| Conversation | 💬 | Indigo | (sin materiales) |
+| Music | 🎵 | Pink (rosa) | Flauta, Cuaderno |
+| Art | 🎨 | Rose | Materiales por la plataforma |
+| Robotics I.C.T | 🤖 | Blue (azul) | (sin materiales) |
+| Ed. Física | ⚽ | Red (rojo) | Uniforme de deportes completo |
+| Danza | 💃 | Fuchsia (fucsia) | Uniforme de educación física |
+| Ética | ⚖️ | Violet | Libro Diseño Original |
+| Religión | 🙏 | Purple (púrpura) | (sin materiales) |
+| Escritura Creativa | ✍️ | Cyan | Cuaderno |
+| Lectura Crítica | 📖 | Stone (piedra) | 2 Libros Enlaces y Pruebas Saber (1°B) / Libro Magia de Leer (2°A) |
+| Pensamiento Creativo | 💡 | Yellow (amarillo) | Libro Divermat |
+
+---
+
+## Filtro de materias
+
+Una **barra horizontal scrolleable** de pills/chips de colores con las materias. Funciona como filtro:
+
+- Por defecto: "Todas" (sin filtro, todo visible)
+- Al hacer clic en una materia: las celdas que NO son esa materia se atenúan (opacity baja + escala reducida), y la materia seleccionada se resalta
+- Hacer clic de nuevo en la misma materia desactiva el filtro
+- Cada pill muestra el emoji + nombre de la materia, usando el color de fondo de esa materia
+- En móvil, solo muestra el emoji (el nombre se oculta para ahorrar espacio)
+
+---
+
+## Vistas
+
+### Vista semanal (desktop por defecto)
+- Grid CSS: columna de horas + 5 columnas de días
+- Las filas especiales (Oración, Descanso, Hora de Fruta, Salida, Club de Tareas) ocupan todo el ancho
+- El día actual se resalta en el encabezado
+- La celda del periodo actual tiene un efecto glow/pulso animado
+
+### Vista diaria (móvil por defecto, < 640px)
+- Lista vertical de tarjetas apiladas para un solo día
+- Selector de días como pills horizontales arriba
+- Cada tarjeta muestra: emoji + nombre materia + hora + badge de uniforme si aplica
+- Animación staggered de entrada (slide-up con delay incremental)
+
+---
+
+## Funcionalidades interactivas
+
+### Modal de materiales
+- Se abre al hacer clic en cualquier celda de clase
+- En móvil: slide-up desde abajo (bottom sheet)
+- En desktop: centrado con backdrop blur
+- Muestra: emoji grande + nombre materia + lista de materiales con checkboxes
+- Los checkboxes se guardan en localStorage y se resetean al cambiar de día (medianoche)
+- Cuando todos están marcados: animación "🎉 ¡Todo listo!"
+- Cierre: clic en backdrop, botón ✕, o tecla Escape
+
+### Dark mode
+- Toggle sol/luna animado en la toolbar
+- Persiste en localStorage
+- Respeta prefers-color-scheme como fallback inicial
+- Script inline en el <head> para evitar flash de contenido
+
+### Banner de uniforme
+- Franja informativa debajo de la toolbar que muestra el uniforme requerido HOY
+- Solo aparece en días escolares (lunes a viernes)
+- Muestra emoji + tipo de uniforme + descripción
+
+### Periodo actual
+- Detecta el día y la hora actual (actualización cada 60 segundos)
+- Resalta la celda correspondiente con un efecto glow-pulse
+- En el encabezado del día actual se muestra con fondo destacado
+
+---
+
+## Estilo visual
+
+- **Paleta**: Colores saturados y vibrantes (nivel 200 de Tailwind para fondos, 400 para bordes, 900 para texto)
+- **Bordes**: rounded-xl (12px) en celdas, rounded-full en pills
+- **Sombras**: shadow-lg en hover, shadow-2xl en modal
+- **Transiciones**: 200ms ease-out en todo, hover lift (-translate-y-0.5)
+- **Gradiente de fondo**: from-blue-50 via-purple-50 to-pink-50 (claro), from-gray-950 via-gray-900 to-gray-950 (oscuro)
+- **Tipografía**: Fredoka para títulos/encabezados (playful, redondeada), Nunito para cuerpo (legible, amigable)
+- **Animaciones**: glow-pulse (periodo actual), slide-up (modal/tarjetas), bounce-in (modal contenido)
+- **Reduced motion**: Todas las animaciones se desactivan con prefers-reduced-motion
+
+---
+
+## Responsive
+
+| Breakpoint | Comportamiento |
+|---|---|
+| < 640px | Vista diaria obligatoria, pills solo con emoji, menú de grados como selector compacto |
+| 640px – 1024px | Vista semanal con scroll horizontal, pills con emoji + nombre |
+| > 1024px | Vista semanal completa sin scroll, todo visible |
+
+---
+
+## Estructura de componentes
+
+```
+ScheduleApp (isla React principal)
+├── Header (título "Horario de Sofía", grado activo)
+├── GradeMenu (menú/selector de grado: Primero B / Segundo A)
+├── Toolbar (sticky)
+│   ├── ViewToggle (Semanal / Diario)
+│   ├── SubjectFilter (pills de materias como filtro)
+│   └── DarkModeToggle
+├── UniformBanner (uniforme de hoy)
+├── WeeklyGrid o DailyView (según vista)
+│   ├── ScheduleCell (tarjeta de cada clase)
+│   └── SpecialRow (oración, descanso, fruta, salida)
+└── MaterialModal (popup con materiales + checklist)
+```

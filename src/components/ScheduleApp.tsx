@@ -4,12 +4,11 @@ import { schedules, getSubjectsForGrade } from '../data/schedules';
 import { useCurrentPeriod } from '../hooks/useCurrentPeriod';
 import { useDarkMode } from '../hooks/useDarkMode';
 import Header from './Header';
-import GradeTabs from './GradeTabs';
+import Sidebar from './Sidebar';
 import Toolbar from './Toolbar';
 import WeeklyGrid from './WeeklyGrid';
 import DailyView from './DailyView';
 import MaterialModal from './MaterialModal';
-import UniformBanner from './UniformBanner';
 
 function getInitialDay(): DayOfWeek {
   const dayMap: Record<number, DayOfWeek> = {
@@ -57,16 +56,14 @@ function reducer(state: AppState, action: AppAction): AppState {
 
 export default function ScheduleApp() {
   const [state, dispatch] = useReducer(reducer, initialState);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const { day: currentDay, currentTimeMinutes } = useCurrentPeriod();
   const { darkMode, toggle: toggleDarkMode } = useDarkMode();
 
   // Auto-switch to daily view on mobile
-  const [isMobile, setIsMobile] = useState(false);
-
   useEffect(() => {
     const mq = window.matchMedia('(max-width: 640px)');
     const handler = (e: MediaQueryListEvent | MediaQueryList) => {
-      setIsMobile(e.matches);
       if (e.matches && state.viewMode === 'weekly') {
         dispatch({ type: 'SET_VIEW_MODE', payload: 'daily' });
       }
@@ -87,26 +84,31 @@ export default function ScheduleApp() {
 
   return (
     <div className="min-h-screen pb-8">
-      <Header gradeName={schedule.name} year={schedule.year} />
-
-      <GradeTabs
-        selected={state.selectedGrade}
-        onSelect={(id) => dispatch({ type: 'SET_GRADE', payload: id })}
+      <Header
+        gradeName={schedule.name}
+        year={schedule.year}
+        onOpenSidebar={() => setSidebarOpen(true)}
       />
 
-      <div className="mt-4">
+      <Sidebar
+        isOpen={sidebarOpen}
+        onClose={() => setSidebarOpen(false)}
+        selectedGrade={state.selectedGrade}
+        onSelectGrade={(id) => dispatch({ type: 'SET_GRADE', payload: id })}
+        currentDay={currentDay}
+        darkMode={darkMode}
+        onToggleDarkMode={toggleDarkMode}
+      />
+
+      <div className="mt-2">
         <Toolbar
           viewMode={state.viewMode}
           onViewModeChange={(mode) => dispatch({ type: 'SET_VIEW_MODE', payload: mode })}
           subjectIds={subjectIds}
           activeFilter={state.subjectFilter}
           onFilter={(id) => dispatch({ type: 'SET_SUBJECT_FILTER', payload: id })}
-          darkMode={darkMode}
-          onToggleDarkMode={toggleDarkMode}
         />
       </div>
-
-      <UniformBanner gradeId={state.selectedGrade} currentDay={currentDay} />
 
       <div className="mt-4">
         {state.viewMode === 'weekly' ? (
