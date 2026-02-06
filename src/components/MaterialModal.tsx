@@ -10,16 +10,29 @@ function getStorageKey(subjectId: string): string {
   return `materials-checked-${subjectId}`;
 }
 
+function getTodayStr(): string {
+  return new Date().toISOString().slice(0, 10);
+}
+
 function loadChecked(subjectId: string): Record<number, boolean> {
   try {
     const raw = localStorage.getItem(getStorageKey(subjectId));
-    if (raw) return JSON.parse(raw);
+    if (raw) {
+      const parsed = JSON.parse(raw);
+      if (parsed.date === getTodayStr()) {
+        return parsed.items;
+      }
+      localStorage.removeItem(getStorageKey(subjectId));
+    }
   } catch { /* ignore */ }
   return {};
 }
 
 function saveChecked(subjectId: string, checked: Record<number, boolean>) {
-  localStorage.setItem(getStorageKey(subjectId), JSON.stringify(checked));
+  localStorage.setItem(
+    getStorageKey(subjectId),
+    JSON.stringify({ date: getTodayStr(), items: checked }),
+  );
 }
 
 export default function MaterialModal({ subjectId, onClose }: MaterialModalProps) {
