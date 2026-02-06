@@ -1,0 +1,276 @@
+import type { SubjectDefinition } from './types';
+
+export const subjects: Record<string, SubjectDefinition> = {
+  english: {
+    id: 'english',
+    name: 'English',
+    emoji: '🇬🇧',
+    colorLight: 'bg-sky-100 text-sky-800 border-sky-300',
+    colorDark: 'dark:bg-sky-900/40 dark:text-sky-200 dark:border-sky-700',
+    materials: [
+      { name: '2 Libros Power UP', emoji: '📚' },
+      { name: 'Diccionario', emoji: '📖' },
+      { name: 'Cuaderno', emoji: '📓' },
+      { name: 'Audífonos', emoji: '🎧' },
+    ],
+  },
+  'leng-castellana': {
+    id: 'leng-castellana',
+    name: 'Leng. Castellana',
+    emoji: '📝',
+    colorLight: 'bg-emerald-100 text-emerald-800 border-emerald-300',
+    colorDark: 'dark:bg-emerald-900/40 dark:text-emerald-200 dark:border-emerald-700',
+    materials: [
+      { name: 'Libro Lenguaje', emoji: '📕' },
+      { name: 'Cuaderno', emoji: '📓' },
+    ],
+  },
+  matematicas: {
+    id: 'matematicas',
+    name: 'Matemáticas',
+    emoji: '🔢',
+    colorLight: 'bg-orange-100 text-orange-800 border-orange-300',
+    colorDark: 'dark:bg-orange-900/40 dark:text-orange-200 dark:border-orange-700',
+    materials: [
+      { name: 'Libro Matemáticas', emoji: '📘' },
+      { name: 'Cuaderno', emoji: '📓' },
+    ],
+  },
+  geometry: {
+    id: 'geometry',
+    name: 'Geometry',
+    emoji: '📐',
+    colorLight: 'bg-amber-100 text-amber-800 border-amber-300',
+    colorDark: 'dark:bg-amber-900/40 dark:text-amber-200 dark:border-amber-700',
+    materials: [
+      { name: 'Cuaderno', emoji: '📓' },
+    ],
+  },
+  science: {
+    id: 'science',
+    name: 'Science',
+    emoji: '🧪',
+    colorLight: 'bg-teal-100 text-teal-800 border-teal-300',
+    colorDark: 'dark:bg-teal-900/40 dark:text-teal-200 dark:border-teal-700',
+    materials: [
+      { name: 'Libro Science Workbook 2', emoji: '📗' },
+      { name: 'Diccionario', emoji: '📖' },
+      { name: 'Cuaderno', emoji: '📓' },
+      { name: 'Bata', emoji: '🥼' },
+    ],
+  },
+  'ciencias-naturales': {
+    id: 'ciencias-naturales',
+    name: 'Ciencias Naturales',
+    emoji: '🌿',
+    colorLight: 'bg-lime-100 text-lime-800 border-lime-300',
+    colorDark: 'dark:bg-lime-900/40 dark:text-lime-200 dark:border-lime-700',
+    materials: [
+      { name: 'Cuaderno', emoji: '📓' },
+      { name: 'Bata', emoji: '🥼' },
+    ],
+  },
+  'ciencias-sociales': {
+    id: 'ciencias-sociales',
+    name: 'Ciencias Sociales',
+    emoji: '🌍',
+    colorLight: 'bg-yellow-100 text-yellow-800 border-yellow-300',
+    colorDark: 'dark:bg-yellow-900/40 dark:text-yellow-200 dark:border-yellow-700',
+    materials: [
+      { name: 'Cuaderno', emoji: '📓' },
+    ],
+  },
+  'social-studies': {
+    id: 'social-studies',
+    name: 'Social Studies',
+    emoji: '🗺️',
+    colorLight: 'bg-amber-100 text-amber-800 border-amber-300',
+    colorDark: 'dark:bg-amber-900/40 dark:text-amber-200 dark:border-amber-700',
+    materials: [
+      { name: 'Cuaderno', emoji: '📓' },
+      { name: 'Diccionario', emoji: '📖' },
+    ],
+  },
+  conversation: {
+    id: 'conversation',
+    name: 'Conversation',
+    emoji: '💬',
+    colorLight: 'bg-indigo-100 text-indigo-800 border-indigo-300',
+    colorDark: 'dark:bg-indigo-900/40 dark:text-indigo-200 dark:border-indigo-700',
+    materials: [],
+  },
+  music: {
+    id: 'music',
+    name: 'Music',
+    emoji: '🎵',
+    colorLight: 'bg-pink-100 text-pink-800 border-pink-300',
+    colorDark: 'dark:bg-pink-900/40 dark:text-pink-200 dark:border-pink-700',
+    materials: [
+      { name: 'Flauta', emoji: '🎶' },
+      { name: 'Cuaderno', emoji: '📓' },
+    ],
+  },
+  art: {
+    id: 'art',
+    name: 'Art',
+    emoji: '🎨',
+    colorLight: 'bg-rose-100 text-rose-800 border-rose-300',
+    colorDark: 'dark:bg-rose-900/40 dark:text-rose-200 dark:border-rose-700',
+    materials: [
+      { name: 'Materiales por la plataforma', emoji: '🖌️' },
+    ],
+  },
+  robotics: {
+    id: 'robotics',
+    name: 'Robotics I.C.T',
+    emoji: '🤖',
+    colorLight: 'bg-blue-100 text-blue-800 border-blue-300',
+    colorDark: 'dark:bg-blue-900/40 dark:text-blue-200 dark:border-blue-700',
+    materials: [],
+  },
+  'educacion-fisica': {
+    id: 'educacion-fisica',
+    name: 'Educación Física',
+    emoji: '⚽',
+    colorLight: 'bg-red-100 text-red-800 border-red-300',
+    colorDark: 'dark:bg-red-900/40 dark:text-red-200 dark:border-red-700',
+    materials: [
+      { name: 'Uniforme de deportes completo', emoji: '👟' },
+    ],
+  },
+  danza: {
+    id: 'danza',
+    name: 'Danza',
+    emoji: '💃',
+    colorLight: 'bg-fuchsia-100 text-fuchsia-800 border-fuchsia-300',
+    colorDark: 'dark:bg-fuchsia-900/40 dark:text-fuchsia-200 dark:border-fuchsia-700',
+    materials: [
+      { name: 'Uniforme de educación física', emoji: '👟' },
+    ],
+  },
+  etica: {
+    id: 'etica',
+    name: 'Ética',
+    emoji: '⚖️',
+    colorLight: 'bg-violet-100 text-violet-800 border-violet-300',
+    colorDark: 'dark:bg-violet-900/40 dark:text-violet-200 dark:border-violet-700',
+    materials: [
+      { name: 'Libro Diseño Original', emoji: '📕' },
+    ],
+  },
+  religion: {
+    id: 'religion',
+    name: 'Religión',
+    emoji: '🙏',
+    colorLight: 'bg-purple-100 text-purple-800 border-purple-300',
+    colorDark: 'dark:bg-purple-900/40 dark:text-purple-200 dark:border-purple-700',
+    materials: [],
+  },
+  'escritura-creativa': {
+    id: 'escritura-creativa',
+    name: 'Escritura Creativa',
+    emoji: '✍️',
+    colorLight: 'bg-cyan-100 text-cyan-800 border-cyan-300',
+    colorDark: 'dark:bg-cyan-900/40 dark:text-cyan-200 dark:border-cyan-700',
+    materials: [
+      { name: 'Cuaderno', emoji: '📓' },
+    ],
+  },
+  'lectura-critica': {
+    id: 'lectura-critica',
+    name: 'Lectura Crítica',
+    emoji: '📖',
+    colorLight: 'bg-stone-100 text-stone-800 border-stone-300',
+    colorDark: 'dark:bg-stone-900/40 dark:text-stone-200 dark:border-stone-700',
+    materials: [
+      { name: '2 Libros Enlaces y Pruebas Saber', emoji: '📚' },
+    ],
+  },
+  'lectura-critica-2': {
+    id: 'lectura-critica-2',
+    name: 'Lectura Crítica',
+    emoji: '📖',
+    colorLight: 'bg-stone-100 text-stone-800 border-stone-300',
+    colorDark: 'dark:bg-stone-900/40 dark:text-stone-200 dark:border-stone-700',
+    materials: [
+      { name: 'Libro Magia de Leer', emoji: '📚' },
+    ],
+  },
+  'pensamiento-creativo': {
+    id: 'pensamiento-creativo',
+    name: 'Pensamiento Creativo',
+    emoji: '💡',
+    colorLight: 'bg-yellow-100 text-yellow-800 border-yellow-300',
+    colorDark: 'dark:bg-yellow-900/40 dark:text-yellow-200 dark:border-yellow-700',
+    materials: [
+      { name: 'Libro Divermat', emoji: '📘' },
+    ],
+  },
+  // Special entries
+  prayer: {
+    id: 'prayer',
+    name: 'Prayer / Brain Gym / Reading',
+    emoji: '🙏',
+    colorLight: 'bg-gradient-to-r from-blue-50 to-purple-50 text-purple-700 border-purple-200',
+    colorDark: 'dark:bg-gradient-to-r dark:from-blue-950/30 dark:to-purple-950/30 dark:text-purple-300 dark:border-purple-800',
+    materials: [
+      { name: 'Agenda Escolar', emoji: '📅' },
+      { name: 'Libro de Cuentos', emoji: '📖' },
+    ],
+  },
+  break: {
+    id: 'break',
+    name: 'Break',
+    emoji: '🎉',
+    colorLight: 'bg-green-50 text-green-700 border-green-200',
+    colorDark: 'dark:bg-green-950/30 dark:text-green-300 dark:border-green-800',
+    materials: [],
+  },
+  'fruit-time': {
+    id: 'fruit-time',
+    name: 'Fruit Time',
+    emoji: '🍎',
+    colorLight: 'bg-red-50 text-red-600 border-red-200',
+    colorDark: 'dark:bg-red-950/30 dark:text-red-300 dark:border-red-800',
+    materials: [],
+  },
+  'go-home': {
+    id: 'go-home',
+    name: 'Go Home',
+    emoji: '🏠',
+    colorLight: 'bg-slate-50 text-slate-600 border-slate-200',
+    colorDark: 'dark:bg-slate-800/30 dark:text-slate-300 dark:border-slate-700',
+    materials: [],
+  },
+  'club-de-tareas': {
+    id: 'club-de-tareas',
+    name: 'Club de Tareas',
+    emoji: '📚',
+    colorLight: 'bg-gray-50 text-gray-600 border-gray-200',
+    colorDark: 'dark:bg-gray-800/30 dark:text-gray-300 dark:border-gray-700',
+    materials: [],
+  },
+  clubes: {
+    id: 'clubes',
+    name: 'Clubes',
+    emoji: '🎯',
+    colorLight: 'bg-gray-50 text-gray-600 border-gray-200',
+    colorDark: 'dark:bg-gray-800/30 dark:text-gray-300 dark:border-gray-700',
+    materials: [],
+  },
+};
+
+export const classSubjectIds = Object.keys(subjects).filter(
+  (id) => !['prayer', 'break', 'fruit-time', 'go-home', 'club-de-tareas', 'clubes'].includes(id)
+);
+
+export function getSubject(id: string): SubjectDefinition {
+  return subjects[id] ?? {
+    id,
+    name: id,
+    emoji: '📋',
+    colorLight: 'bg-gray-100 text-gray-800 border-gray-300',
+    colorDark: 'dark:bg-gray-800/40 dark:text-gray-200 dark:border-gray-700',
+    materials: [],
+  };
+}
